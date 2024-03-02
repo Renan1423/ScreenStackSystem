@@ -33,5 +33,7 @@ public class UIStateManager : MonoBehaviour
             currentState = UI_State.KEY_OR_GAMEPAD;
         else if (mouseInput)
             currentState = UI_State.MOUSE;
+		
+		screenStack.SetNewUIState(currentState);
     }
 }

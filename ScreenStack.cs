@@ -96,4 +96,10 @@ public class ScreenStack : MonoBehaviour
     {
         return stack.Contains(screen);
     }
+	
+	public void SetNewUIState(UI_State newUiState)
+    {
+        if (newUiState == UI_State.KEY_OR_GAMEPAD)
+            currentScreen.FocusOnButton();
+    }
 }

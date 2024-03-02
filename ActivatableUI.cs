@@ -65,6 +65,13 @@ public class ActivatableUI : MonoBehaviour
     {
         StartCoroutine(StartOpenCloseAnimation(false));
     }
+	
+	public void FocusOnButton() 
+    {
+        buttonToFocus = GetDesiredButtonToFocus();
+        if (buttonToFocus)
+            EventSystem.current.SetSelectedGameObject(buttonToFocus.gameObject);
+    }
 
     private IEnumerator StartOpenCloseAnimation(bool active) 
     {
